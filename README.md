@@ -38,7 +38,7 @@ docker run \
   --env="PT_PORT=514" \
   --restart=always \
   --volume="$HOME/.pt-log:/pt-log/$(id -ng $USER)" \
-  meonkeys/pt-log
+  gcr.io/surveyadmin-001/pt-log
 ```
 
 ### TCP port
@@ -54,7 +54,7 @@ docker run \
   --env="LISTEN_PORT=12004" \
   -p 12004:12004 \
   --restart=always \
-  meonkeys/pt-log
+  gcr.io/surveyadmin-001/pt-log
 ```
 
 ## Log a message to Papertrail
@@ -82,7 +82,7 @@ docker run \
   --env="PT_DEST=logs.papertrailapp.com" \
   --env="PT_PORT=514" \
   --volume="$HOME/.pt-log:/pt-log/$(id -ng $USER)" \
-  meonkeys/pt-log \
+  gcr.io/surveyadmin-001/pt-log \
   /bin/sh
 ```
 
@@ -92,6 +92,6 @@ The `logger` command (provided by the `bsdutils` package on Ubuntu) can also wri
 
 ## Copyright and License
 
-Copyright (C)2016 Adam Monsen.
+Copyright (C)2020 C-SATS, Inc.
 
 License: AGPL v3. See COPYING for details.
